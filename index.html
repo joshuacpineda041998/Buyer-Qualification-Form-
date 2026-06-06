@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Qualification Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>🏡 Find Your Dream Home Match!</h1>
+            <p class="subtitle">Ready to stop renting and start owning?</p>
+            
+            <form id="qualificationForm">
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message hidden">
+                    <div class="success-icon">✓</div>
+                    <p>Thank you for submitting. Our property consultant will contact you shortly.</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message hidden">
+                    <div class="error-icon">✕</div>
+                    <p id="errorText"></p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-section">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Client Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                            <span class="error-text hidden"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact">Contact Number *</label>
+                            <input type="tel" id="contact" name="contact" placeholder="09XX XXX XXXX" required>
+                            <span class="error-text hidden"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <a href="tel:+639187494837" class="call-button">📞 CALL NOW: 09187494837</a>
+                    </div>
+                </div>
+
+                <!-- Property Requirements -->
+                <div class="form-section">
+                    <h2>Property Requirements</h2>
+                    
+                    <div class="form-group">
+                        <label for="purpose">1. Purpose of buying?</label>
+                        <select id="purpose" name="purpose">
+                            <option value="">Select purpose</option>
+                            <option value="Personal Home">Personal Home</option>
+                            <option value="Investment / Rental Income">Investment / Rental Income</option>
+                            <option value="For Family">For Family</option>
+                            <option value="Future Retirement Property">Future Retirement Property</option>
+                            <option value="Upgrade from Current Home">Upgrade from Current Home</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location Priority?</label>
+                        <select id="location" name="location">
+                            <option value="">Select location</option>
+                            <option value="Near Clark">Near Clark</option>
+                            <option value="Near Expressway">Near Expressway</option>
+                            <option value="Near Work">Near Work</option>
+                            <option value="Near Schools / Hospital">Near Schools / Hospital</option>
+                            <option value="High Appreciation Area">High Appreciation Area</option>
+                            <option value="Peaceful Community">Peaceful Community</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Financial Information -->
+                <div class="form-section">
+                    <h2>Financial Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="tcp">2. Target Total Contract Price Budget?</label>
+                        <select id="tcp" name="tcp">
+                            <option value="">Select budget</option>
+                            <option value="Below ₱2M">Below ₱2M</option>
+                            <option value="₱2M - ₱3M">₱2M - ₱3M</option>
+                            <option value="₱3M - ₱4M" selected>₱3M - ₱4M</option>
+                            <option value="₱4M - ₱5M">₱4M - ₱5M</option>
+                            <option value="₱5M+">₱5M+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monthly">3. Comfortable Monthly Budget?</label>
+                        <select id="monthly" name="monthly">
+                            <option value="">Select budget</option>
+                            <option value="Below ₱10,000">Below ₱10,000</option>
+                            <option value="₱10,000 - ₱15,000">₱10,000 - ₱15,000</option>
+                            <option value="₱15,000 - ₱20,000" selected>₱15,000 - ₱20,000</option>
+                            <option value="₱20,000 - ₱30,000">₱20,000 - ₱30,000</option>
+                            <option value="₱30,000+">₱30,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="income">4. Monthly Income / Earnings?</label>
+                        <select id="income" name="income">
+                            <option value="">Select income</option>
+                            <option value="Below ₱25,000">Below ₱25,000</option>
+                            <option value="₱25,000 - ₱40,000">₱25,000 - ₱40,000</option>
+                            <option value="₱40,000 - ₱60,000" selected>₱40,000 - ₱60,000</option>
+                            <option value="₱60,000 - ₱100,000">₱60,000 - ₱100,000</option>
+                            <option value="₱100,000+">₱100,000+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Financing & Timeline -->
+                <div class="form-section">
+                    <h2>Financing & Timeline</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="financing">5. Preferred Financing?</label>
+                            <select id="financing" name="financing">
+                                <option value="PAG-IBIG Financing" selected>PAG-IBIG Financing</option>
+                                <option value="Bank Financing">Bank Financing</option>
+                                <option value="Spot Cash">Spot Cash</option>
+                                <option value="Deferred Cash">Deferred Cash</option>
+                                <option value="Still Exploring">Still Exploring</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">6. Buying Timeline?</label>
+                            <select id="timeline" name="timeline">
+                                <option value="ASAP / This Month">ASAP / This Month</option>
+                                <option value="Within 3 months" selected>Within 3 months</option>
+                                <option value="Within 6 months">Within 6 months</option>
+                                <option value="Next year">Next year</option>
+                                <option value="Still canvassing">Still canvassing</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Details -->
+                <div class="form-section">
+                    <h2>Additional Details</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="source">7. Source of Income?</label>
+                            <select id="source" name="source">
+                                <option value="Employed" selected>Employed</option>
+                                <option value="OFW">OFW</option>
+                                <option value="Business Owner">Business Owner</option>
+                                <option value="Freelancer / VA">Freelancer / VA</option>
+                                <option value="Seafarer">Seafarer</option>
+                                <option value="Mixed Income">Mixed Income</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="decision">8. Decision Maker?</label>
+                            <select id="decision" name="decision">
+                                <option value="Self only">Self only</option>
+                                <option value="Self + Spouse" selected>Self + Spouse</option>
+                                <option value="Family involved">Family involved</option>
+                                <option value="Parents involved">Parents involved</option>
+                                <option value="Business Partner">Business Partner</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visit">9. Available for FREE Site Visit?</label>
+                        <select id="visit" name="visit">
+                            <option value="This Week">This Week</option>
+                            <option value="This Weekend" selected>This Weekend</option>
+                            <option value="Next Week">Next Week</option>
+                            <option value="Online Presentation muna">Online Presentation muna</option>
+                            <option value="Not yet ready">Not yet ready</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">SUBMIT QUALIFICATION</span>
+                        <span class="btn-loader hidden">SUBMITTING...</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
